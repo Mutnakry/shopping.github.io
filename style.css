@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+      max-width: 1600px;
+      margin: auto;
+      height:700px ;
+      background: rgb(85, 255, 0);
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  nav{
+    display: flex;
+    flex-direction:column;
+    position: fixed;
+    width: 214px;
+    background: rgb(168, 164, 164);
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0.2px;
+  }
+  nav .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(230, 230, 230);
+  }
+  nav .top img{
+    width: 90px;
+    border-radius: 50px;
+    border: 2px solid rgb(164, 164, 171);
+    margin: 10px;
+  }
+  nav .top h1{
+    color: rgb(145, 255, 0);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  nav .top span-line{
+    display: block;
+    width: 205px;
+    height: 3px;
+    background: pink;
+  }
+  nav .bot .nav-line a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+  }
+  nav a span{
+    margin-left: 25px;
+  }
+  ::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track{
+    background:rgb(255, 255, 255) ;
+  }
+  ::-webkit-scrollbar-thumb{
+    background:rgb(255, 0, 0) ;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background:rgb(245, 241, 241) ;
+  }
+  input{
+    position: absolute;
+    margin-left: 237px;
+    margin-top:22px;
+    background: blue;
+    transform: scale(2.1);
+    cursor: pointer;
+    opacity: 0;
+  }
+  .navbar{
+    max-width: 100%;
+    min-height: 60px;
+    margin-left: 214px;
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .right h1{
+    color: aliceblue;
+    padding: 10px;
+  }
+  .nav .left .hamhurger{
+    padding: 10px;
+  }
+  .navbar .left .hamhurger span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 6.5px;
+  } 
+  input:checked ~ nav{
+    display: none;
+  }
+  input:checked ~ .navbar{
+    margin-left: 0px;
+  }
+  input:checked{
+    margin-left: 22.5px;
+  }
+  @media (max-width:900px) {
+    body{
+      overflow: scroll;
+    }
+    nav{
+      display: none;
+      width: 200px;
+    }
+    nav .top span-line{
+      width: 191px;
+    }
+    .navbar{
+      margin-left: 0;
+      width: 100%;
+    }
+    input{
+      opacity: 0;
+      margin-left: 22.5px;
+    }
+    input:checked{
+      margin-left: 222px;
+    }
+    input:checked ~ nav{
+      display: block;
+    }
+    input:checked ~ .navbar{
+      margin-left: 200px;
+    }
+  }
